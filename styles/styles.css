@@ -32,13 +32,14 @@ body {
 
 .article__title {
   font-size: 2.25rem;
-  font-weight: bold;
   line-height: 2.5rem;
+  font-weight: bold;
 }
 
 .article__text {
-  font-weight: normal;
   line-height: 1.625rem;
+  font-weight: normal;
+
 }
 
 .article-list-title {
@@ -53,4 +54,28 @@ body {
 .article-list__item {
   line-height: 1.625rem;
   margin: 0.75rem 0;
+}
+
+@media (max-width: 768px) { /* [T] */
+  .article {
+    margin: 3rem 0;
+  }  
+  .article__item {
+    padding: 0 5rem;
+  }
+
+  .article p,
+  .article h3 {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  .article__title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+  }  
+  .article__text {
+    font-weight: normal;
+    line-height: 1.625rem;
+  }
 }
