@@ -25,7 +25,7 @@ body {
 }
 
 .article {
-  margin: 4rem 0;
+  margin: 3.375rem 0;
 }
 
 .article__item {
@@ -35,6 +35,11 @@ body {
 
 .article p,
 .article h3 {
+  width: 68.55%;
+  margin: 0 0 1.25rem 0;
+}
+
+.card__text {
   width: 68.55%;
   margin: 0 0 1.25rem 0;
 }
@@ -76,18 +81,32 @@ body {
   max-width: 16.5rem;
   margin-bottom: 1rem;
 }
-
 .small-card-with-img {
   padding-top: 0.625rem;
 }
-
 .small-card__link-wrapper {
   max-width: 80%;
 }
-
 .small-card__link {
   font-size: 0.813rem;
   line-height: 1.25rem;
+}
+
+
+.card {
+  margin: 3rem 0;
+}
+.card p {
+  font-size: 15px;
+  line-height: 24px;
+}
+.card__image {
+  width: 100%;
+  height: auto;
+}
+
+.article__item:has(+ .card) .article__text:last-of-type {
+  margin-bottom: 0;
 }
 
 @media (max-width: 768px) { /* [T] */
@@ -140,10 +159,20 @@ body {
     font-size: 0.813rem;
     line-height: 1.125rem;
   }
+
+  .card {
+    margin: 1.75rem 0;
+  }
+  .card__text-wrapper {
+    padding: 0 5rem;
+  }
 }
 
 @media (max-width: 320px) { /* [M] */
   .article__item {
+    padding: 0 1rem;
+  }
+  .card__text-wrapper {
     padding: 0 1rem;
   }
   .small-card {
