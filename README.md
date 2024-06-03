@@ -4,3 +4,6 @@
 - Сделайте макет в трех разрешениях: 320, 768 и 1440.
 - Шрифты можно подключить через Google Fonts.
 - Работу выложите на Github.
+
+# Результат:
+- [Простая страница](https://alexandrturdiyev.github.io/test-task/index.html)
