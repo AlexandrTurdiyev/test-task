@@ -11,7 +11,11 @@
 
 body {
   font-family: Roboto;
-  font-size: 1.063rem;;
+  font-size: 17px;
+}
+
+ul:last-child {
+  margin: 0;
 }
 
 .article__item a {
@@ -25,7 +29,7 @@ body {
 }
 
 .article {
-  margin: 3.375rem 0;
+  margin: 54px 0;
 }
 
 .article__item {
@@ -33,41 +37,48 @@ body {
   display: flex;
 }
 
-.article p,
-.article h3 {
+.article__text,
+.article__title,
+.quote-card__text {
   width: 68.55%;
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 20px 0;
 }
 
 .card__text {
   width: 68.55%;
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 20px 0;
 }
 
 .article__title {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 36px;
+  line-height: 40px;
   font-weight: bold;
 }
 
-.article__text {
-  line-height: 1.625rem;
+.article__text,
+.quote-card__text {
+  font-size: 17px;
+  line-height: 26px;
   font-weight: normal;
 
 }
 
 .article-list-title {
   font-weight: bold;
-  margin: 0.75rem 0;
+  margin: 6px 0;
 }
 
 .article-list {
-  padding-left: 2rem;
+  padding-left: 32px;
 }
 
 .article-list__item {
-  line-height: 1.625rem;
-  margin: 0.75rem 0;
+  line-height: 26px;
+  margin: 12px 0;
+}
+
+.item-before-card p {
+  margin: 0;
 }
 
 .small-card {
@@ -78,23 +89,23 @@ body {
   flex-direction: column;
   gap: 0.1rem;
   width: 30%;
-  max-width: 16.5rem;
-  margin-bottom: 1rem;
+  max-width: 264px;
+  margin-bottom: 16px;
 }
 .small-card-with-img {
-  padding-top: 0.625rem;
+  padding-top: 10px;
 }
 .small-card__link-wrapper {
   max-width: 80%;
 }
 .small-card__link {
-  font-size: 0.813rem;
-  line-height: 1.25rem;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 
 .card {
-  margin: 3rem 0;
+  margin: 48px 0;
 }
 .card p {
   font-size: 15px;
@@ -109,7 +120,7 @@ body {
   overflow: hidden;
   border: 1px solid #00000026;
   width: 68.55%;
-  margin: 48px 0;
+  margin: 48px 0 67px 0;
 }
 .card-posts__link{
   line-height: 26px;
@@ -156,6 +167,7 @@ body {
 .quote-card {
   border-left: 1px solid #000000;
   padding-left: 33px;
+  margin: 48px 0;
 }
 
 .profile {
@@ -179,36 +191,40 @@ body {
 
 @media (max-width: 768px) { /* [T] */
   .article {
-    margin: 3rem 0;
+    margin: 41px 0;
   }  
   .article__item {
-    padding: 0 5rem;
+    padding: 0 80px;
     flex-direction: column;
   }
 
-  .article p,
-  .article h3 {
-    width: 100%;
-    margin: 0 0 1rem 0;
-  }
+.article__text,
+.article__title,
+.card__text,
+.quote-card__text {
+  width: 100%;
+  margin: 0 0 16px 0;
+}
+
+
   .article__title {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 24px;
+    line-height: 24px;
     font-weight: bold;
   }  
   .article__text {
     font-weight: normal;
-    line-height: 1.625rem;
+    line-height: 26px;
   }
 
   .small-card {
     position: relative;
-    padding: 0 0 0 2rem;
+    padding: 0 0 0 32px;
     width: 100%;
     max-width: 100%;
   }
   .small-card-just-link {
-    padding-left: 2.75rem;
+    padding-left: 44px;
   }
   .small-card-just-link a {
     width: 60%;
@@ -224,40 +240,46 @@ body {
     margin-top: 6px;
   }
   .small-card__link {
-    font-size: 0.813rem;
-    line-height: 1.125rem;
+    font-size: 13px;
+    line-height: 18px;
   }
 
   .card {
-    margin: 1.75rem 0;
+    margin: 28px 0;
   }
   .card__text-wrapper {
-    padding: 0 5rem;
+    padding: 0 80px;
   }
 
   .card-wrapper {
-    padding: 0 5rem;
+    padding: 0 80px;
   }
   .card-posts {
     width: 100%;
+    margin: 28px 0;
   }
   .card-posts_title {
     font-size: 19px;
     line-height: 28px;
   }
 
+  .quote-card {
+    padding-left: 16px;
+    margin: 28px 0;
+  }
+
 }
 
 @media (max-width: 320px) { /* [M] */
   .article__item {
-    padding: 0 1rem;
+    padding: 0 16px;
   }
   .card__text-wrapper {
-    padding: 0 1rem;
+    padding: 0 16px;
   }
   .small-card {
     width: 100%;
-    max-width: 10.563rem;
+    max-width: 169px;
   }  
   .small-card-with-img {
     padding-top: 0;
@@ -269,14 +291,14 @@ body {
     max-width: 86%;
   }
   .small-card-just-link {
-    padding-left: 2rem;
+    padding-left: 32px;
   }
   .small-card-just-link a {
     width: 100%;
   }
 
   .card-wrapper {
-    padding: 0 1rem;
+    padding: 0 16px;
   }
   .card-posts__image-wrapper {
     display: none;
